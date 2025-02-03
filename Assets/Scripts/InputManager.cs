@@ -14,7 +14,8 @@ public class InputManager : MonoBehaviour
             OnSpacePressed?.Invoke();
         }
 
-        Vector2 input = Vector2.zero; if (Input.GetKey(KeyCode.A))
+        Vector2 input = Vector2.zero;
+        if (Input.GetKey(KeyCode.A))
         {
             input += Vector2.left;
         }
