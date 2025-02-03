@@ -4,7 +4,18 @@ public class Gutter : MonoBehaviour
 {
     private void OnTriggerEnter(Collider triggeredBody)
     {
+        if (!triggeredBody.CompareTag("Ball"))
+        {
+            Debug.Log($"Object {triggeredBody.gameObject.name} ignored by gutter - not tagged as Ball");
+            return;
+        }
+
         Rigidbody ballRigidBody = triggeredBody.GetComponent<Rigidbody>();
+        if (ballRigidBody == null)
+        {
+            Debug.LogWarning($"Object {triggeredBody.gameObject.name} has no Rigidbody component");
+            return;
+        }
 
         float velocityMagnitude = ballRigidBody.linearVelocity.magnitude;
 
