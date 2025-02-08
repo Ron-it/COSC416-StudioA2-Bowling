@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     private GameObject pinObjects;
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         //Adding the HandleReset function as a listener to our
         //newly added OnResetPressedEvent
         inputManager.OnResetPressed.AddListener(HandleReset);

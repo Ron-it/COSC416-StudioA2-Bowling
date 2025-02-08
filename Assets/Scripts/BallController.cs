@@ -47,10 +47,8 @@ public class BallController : MonoBehaviour
         }
         isBallLaunched = true;
         transform.parent = null;
+        ballRB.isKinematic = false;
         ballRB.AddForce(launchIndicator.forward * force, ForceMode.Impulse);
         launchIndicator.gameObject.SetActive(false);
-        ballRB.isKinematic = false;
-        // Add a force to the ball
-        ballRB.AddForce(transform.forward * force, ForceMode.Impulse);
     }
 }
