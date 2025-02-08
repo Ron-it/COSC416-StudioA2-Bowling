@@ -10,3 +10,4 @@ A physics-based Unity bowling simulation where players can experience the classi
 - R: Reset pins/ball
 
 ## Video Demo
+https://github.com/user-attachments/assets/cb2a9dbc-ce5a-4d6d-b694-298eed3b1a71
